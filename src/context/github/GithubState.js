@@ -1,19 +1,19 @@
-import React, { useReducer } from 'react';
-import axios from 'axios';
-import GithubContext from './githubContext';
-import GithubReducer from './githubReducer';
+import React, { useReducer } from "react";
+import axios from "axios";
+import GithubContext from "./githubContext";
+import GithubReducer from "./githubReducer";
 import {
   SEARCH_USERS,
   SET_LOADING,
   CLEAR_USERS,
   GET_USER,
   GET_REPOS
-} from '../types';
+} from "../types";
 
-let githubClientId;
-let githubClientSecret;
+let githubClientId = "b43e63030f4294e683ba";
+let githubClientSecret = "cd57e14bcede5ce2602ded0c6d2ba0531a9939ac";
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
   githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
 } else {
